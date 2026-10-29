@@ -1009,3 +1009,39 @@ button:focus-visible {
     display: none; /* Hides 'LET'S CONNECT' label on smaller screens to keep it clean */
   }
 }
+
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: 40px;
+}
+
+.about-photo {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--surface);
+}
+
+.about-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+@media (max-width: 680px) {
+    .about-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+}
+
+
+/* Add breathing room below the About heading */
+#about .section-heading {
+    margin-bottom: 36px;
+}
